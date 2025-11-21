@@ -21,13 +21,13 @@ struct MainTabView: View {
             }
             .tag(0)
             
-            // Tab 2: Memory Path
+            // Tab 2: Crystal Memory
             NavigationView {
-                MemoryPathGameView(progressStore: progressStore)
+                CrystalMemoryGameView(progressStore: progressStore)
             }
             .navigationViewStyle(.stack)
             .tabItem {
-                Label("Memory", systemImage: "brain.head.profile")
+                Label("Crystals", systemImage: "diamond.fill")
             }
             .tag(1)
             
@@ -107,8 +107,8 @@ struct ProgressHubView: View {
                             color: Color("AccentGreen")
                         )
                         PerformanceRow(
-                            icon: "brain.head.profile",
-                            title: "Memory Path",
+                            icon: "diamond.fill",
+                            title: "Crystal Memory",
                             value: "Level \(progressStore.bestStreakGame2)",
                             color: Color("HighlightYellow")
                         )

@@ -18,15 +18,15 @@ struct ContentView: View {
     
     var body: some View {
         
-        ZStack {
-            
-            if isFetched == false {
-                
-                ProgressView()
-                
-            } else if isFetched == true {
-                
-                if isBlock == true {
+//        ZStack {
+//            
+//            if isFetched == false {
+//                
+//                ProgressView()
+//                
+//            } else if isFetched == true {
+//                
+//                if isBlock == true {
                 
                     ZStack {
                         if showOnboarding {
@@ -44,13 +44,13 @@ struct ContentView: View {
                     .onAppear {
                         showOnboarding = !progressStore.hasCompletedOnboarding
                     }
-                    
-                } else if isBlock == false {
-                    
-                    WebSystem()
-                }
-            }
-        }
+//                    
+//                } else if isBlock == false {
+//                    
+//                    WebSystem()
+//                }
+//            }
+//        }
         .onAppear {
             
             makeServerRequest()
