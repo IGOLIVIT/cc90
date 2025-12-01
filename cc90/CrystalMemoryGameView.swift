@@ -34,7 +34,7 @@ struct CrystalMemoryGameView: View {
             VStack(spacing: 20) {
                 // Instructions
                 if gameState == .idle {
-                    Text("Watch the crystals glow, then tap them in the same order!")
+                    Text("Crystal sequence challenge! Watch them glow, then match the pattern.")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(Color("TextSecondary"))
                         .multilineTextAlignment(.center)
@@ -460,4 +460,5 @@ struct CrystalFacet: Shape {
         return path
     }
 }
+
 

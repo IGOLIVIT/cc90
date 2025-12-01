@@ -150,7 +150,7 @@ struct OnboardingPage1: View {
                 )
                 
                 VStack(spacing: 20) {
-                    Text("Lantern Road")
+                    Text("Crystal Pathways")
                         .font(.system(size: 42, weight: .bold))
                         .foregroundStyle(
                             LinearGradient(
@@ -161,7 +161,7 @@ struct OnboardingPage1: View {
                         )
                         .multilineTextAlignment(.center)
                     
-                    Text("A mystical journey through glowing night paths")
+                    Text("Master unique mind-bending crystal challenges")
                         .font(.system(size: 18, weight: .regular))
                         .foregroundColor(Color("TextSecondary"))
                         .multilineTextAlignment(.center)
@@ -191,10 +191,10 @@ struct OnboardingPage2: View {
     @Binding var animateElements: Bool
     
     let features = [
-        ("gamecontroller.fill", "4 Unique Games", "Master different challenges"),
-        ("trophy.fill", "Collect Rewards", "Earn feathers and lanterns"),
-        ("chart.line.uptrend.xyaxis", "Track Progress", "Watch your journey grow"),
-        ("sparkles", "Beautiful Design", "Enjoy the night aesthetics")
+        ("bolt.fill", "Energy Flow", "Navigate through streams"),
+        ("diamond.fill", "Crystal Memory", "Match glowing patterns"),
+        ("waveform.path", "Pulse Sync", "Perfect timing challenge"),
+        ("square.grid.3x3.fill", "Matrix Build", "Complete energy circuits")
     ]
     
     var body: some View {
@@ -203,7 +203,7 @@ struct OnboardingPage2: View {
                 Spacer()
                     .frame(height: 60)
                 
-                Text("What Awaits")
+                Text("Four Unique Challenges")
                     .font(.system(size: 36, weight: .bold))
                     .foregroundColor(.white)
                     .opacity(animateElements ? 1 : 0)
@@ -337,12 +337,12 @@ struct OnboardingPage3: View {
                 .scaleEffect(animateElements ? 1 : 0.3)
                 
                 VStack(spacing: 20) {
-                    Text("Ready to Start?")
+                    Text("Your Crystal Adventure")
                         .font(.system(size: 38, weight: .bold))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                     
-                    Text("Your adventure through the glowing roads begins now")
+                    Text("Master all challenges and unlock cosmic achievements")
                         .font(.system(size: 18, weight: .regular))
                         .foregroundColor(Color("TextSecondary"))
                         .multilineTextAlignment(.center)

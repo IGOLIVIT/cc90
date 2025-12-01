@@ -41,7 +41,7 @@ struct RhythmTapGameView: View {
             VStack(spacing: 20) {
                 // Instructions
                 if gameState == .idle {
-                    Text("Tap when the energy orbs reach the center line!")
+                    Text("Synchronize with energy pulses! Tap when orbs reach the sync line.")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(Color("TextSecondary"))
                         .multilineTextAlignment(.center)
@@ -197,7 +197,7 @@ struct RhythmTapGameView: View {
             .frame(maxWidth: .infinity)
         }
         .background(Color("PrimaryBackground").ignoresSafeArea())
-        .navigationTitle("Rhythm Steps")
+        .navigationTitle("Pulse Sync")
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear {
             stopGame()

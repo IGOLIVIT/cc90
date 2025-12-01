@@ -46,7 +46,7 @@ struct PuzzleRoadGameView: View {
             VStack(spacing: 20) {
                 // Instructions
                 if gameState == .idle {
-                    Text("Tap tiles below to fill the energy path!")
+                    Text("Build an energy matrix! Select and place crystals to complete the circuit.")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(Color("TextSecondary"))
                         .multilineTextAlignment(.center)
@@ -291,7 +291,7 @@ struct PuzzleRoadGameView: View {
             .frame(maxWidth: .infinity)
         }
         .background(Color("PrimaryBackground").ignoresSafeArea())
-        .navigationTitle("Path Builder")
+        .navigationTitle("Matrix Build")
         .navigationBarTitleDisplayMode(.inline)
     }
     

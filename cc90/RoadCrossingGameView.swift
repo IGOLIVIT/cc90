@@ -36,7 +36,7 @@ struct RoadCrossingGameView: View {
             VStack(spacing: 20) {
                 // Instructions
                 if gameState == .idle {
-                    Text("Swipe left or right to change lanes. Avoid obstacles and reach the destination!")
+                    Text("Navigate energy streams! Swipe to change lanes and avoid discharge obstacles.")
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(Color("TextSecondary"))
                         .multilineTextAlignment(.center)
@@ -214,7 +214,7 @@ struct RoadCrossingGameView: View {
             .frame(maxWidth: .infinity)
         }
         .background(Color("PrimaryBackground").ignoresSafeArea())
-        .navigationTitle("Safe Passage")
+        .navigationTitle("Energy Flow")
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear {
             stopGame()

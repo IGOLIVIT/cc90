@@ -11,13 +11,13 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            // Tab 1: Safe Passage
+            // Tab 1: Energy Flow
             NavigationView {
                 RoadCrossingGameView(progressStore: progressStore)
             }
             .navigationViewStyle(.stack)
             .tabItem {
-                Label("Safe Passage", systemImage: "figure.walk")
+                Label("Energy Flow", systemImage: "bolt.fill")
             }
             .tag(0)
             
@@ -31,23 +31,23 @@ struct MainTabView: View {
             }
             .tag(1)
             
-            // Tab 3: Rhythm Steps
+            // Tab 3: Pulse Sync
             NavigationView {
                 RhythmTapGameView(progressStore: progressStore)
             }
             .navigationViewStyle(.stack)
             .tabItem {
-                Label("Rhythm", systemImage: "waveform")
+                Label("Pulse Sync", systemImage: "waveform.path")
             }
             .tag(2)
             
-            // Tab 4: Road Builder
+            // Tab 4: Matrix Build
             NavigationView {
                 PuzzleRoadGameView(progressStore: progressStore)
             }
             .navigationViewStyle(.stack)
             .tabItem {
-                Label("Builder", systemImage: "puzzlepiece.fill")
+                Label("Matrix", systemImage: "square.grid.3x3.fill")
             }
             .tag(3)
             
@@ -101,8 +101,8 @@ struct ProgressHubView: View {
                     
                     VStack(spacing: 12) {
                         PerformanceRow(
-                            icon: "figure.walk",
-                            title: "Safe Passage",
+                            icon: "bolt.fill",
+                            title: "Energy Flow",
                             value: "\(progressStore.bestStreakGame1) runs",
                             color: Color("AccentGreen")
                         )
@@ -113,14 +113,14 @@ struct ProgressHubView: View {
                             color: Color("HighlightYellow")
                         )
                         PerformanceRow(
-                            icon: "waveform",
-                            title: "Rhythm Steps",
+                            icon: "waveform.path",
+                            title: "Pulse Sync",
                             value: "\(progressStore.bestStreakGame3) perfect",
                             color: Color("SoftOrange")
                         )
                         PerformanceRow(
-                            icon: "puzzlepiece.fill",
-                            title: "Road Builder",
+                            icon: "square.grid.3x3.fill",
+                            title: "Matrix Build",
                             value: "Level \(progressStore.bestStreakGame4)",
                             color: Color("AccentGreen")
                         )
